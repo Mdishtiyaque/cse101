@@ -1,15 +1,18 @@
 {
   "name": "task-management-app",
   "version": "1.0.0",
-  "description": "A full-stack task management application with hierarchical tasks and dependencies",
+  "description": "A comprehensive task management application with hierarchical tasks and dependency management",
   "main": "index.js",
   "scripts": {
     "install-all": "cd backend && npm install && cd ../frontend && npm install",
-    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm start\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
     "build": "cd frontend && npm run build",
-    "start": "cd backend && npm start"
+    "migrate": "cd backend && npm run migrate",
+    "seed": "cd backend && npm run seed"
   },
-  "keywords": ["task-management", "react", "express", "postgresql"],
+  "keywords": ["task-management", "react", "express", "postgresql", "jwt"],
   "author": "Tech Private Limited",
   "license": "MIT",
   "devDependencies": {
